@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("img/photo_2022-03-16_12-51-15.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.menutitle {
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.menu {
+  padding: 20px;
+  padding-left: 50px;
+  width: 300px;
+  height: 600px;
+  background: #fff;
+  border-radius: 20px 0 0 20px;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 17px 7px rgba(34, 60, 80, 0.2);
+}
+
+.pizza {
+  position: relative;
+  padding: 0px;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  background: #ffe5c4;
+  border-radius: 20px;
+}
+
+.pizza__img {
+  position: relative;
+  top: -10px;
+  left: -15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.pizza__desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.pizza__p {
+  margin: 10px 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.pizza__price {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.pizza__btn {
+  padding: 3px;
+  position: relative;
+  bottom: -10px;
+  width: 70%;
+  font-size: 14px;
+  font-weight: 600;
+  background: #7b4bff;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+}
+.pizza__btn.remove {
+  background-color: red;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+/* cart =================================== */
+
+.cart {
+  margin-left: 20px;
+  width: 400px;
+  height: 640px;
+  background: #ffffff;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0px 0px 17px 7px rgba(34, 60, 80, 0.2);
+  overflow-y: hidden;
+}
+
+.cart .menutitle {
+  margin: 20px;
+  margin-left: 30px;
+}
+
+.cart .cart__list {
+  padding: 20px;
+  padding-left: 30px;
+  height: 480px;
+  overflow-y: scroll;
+}
+
+.cart__item {
+  position: relative;
+  display: flex;
+  width: 95%;
+  height: 93px;
+  background: #e0e8ff;
+  border-radius: 20px;
+  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.cart__img {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.cart__price {
+  position: relative;
+  top: -15px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cart__del {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.price {
+  position: relative;
+  bottom: -9px;
+  display: flex;
+  justify-content: space-evenly;
+  background: #ffe5c4;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price__title {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.price__amount,
+.dollar__sign {
+  font-weight: 700;
+}
+.btn-groiup {
+  display: flex;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+}
+.btn-num {
+  padding: 7px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #7b4bff;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  margin-right: 7px;
+}
+.btn-max {
+  padding: 4px 9px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #7b4bff;
+  color: #fff;
+  /* border-radius: 50%; */
+  border: none;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.btn-min {
+  cursor: pointer;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #7b4bff;
+  color: #fff;
+  /* border-radius: 50%; */
+  border: none;
+}
+
+/* @keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+
+.animat {
+  animation-name: my;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+}
+@keyframes my {
+  0%{
+    position: relative;
+    bottom: -50px;
+  }
+  100%{
+    position: relative;
+    bottom: 0;
+  }
+}
+
+
+
+
+
+
+

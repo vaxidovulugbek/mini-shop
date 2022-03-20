@@ -36,7 +36,7 @@ let array =
 let totalPrice = 0;
 let summari = 0
 
-
+// onclick='addItem(${array[i].id} )'
 // left box added
 for (let i = 0; i < array.length; i++) {
   let li = document.createElement("li");
@@ -46,7 +46,7 @@ for (let i = 0; i < array.length; i++) {
             <div class="pizza__name">
               <p class="pizza__p">${array[i].name}</p>
               <span class="pizza__price">$${array[i].price}</span>
-              <button class="pizza__btn" id="birrbtn" onclick='addItem(${array[i].id} )'>
+              <button class="pizza__btn" id="birrbtn" >
                 Add to Cart
               </button>
             </div>
@@ -55,35 +55,29 @@ for (let i = 0; i < array.length; i++) {
   menuList.appendChild(li);
 }
 
+
 // shu joydan yangi sahifa yoziladi btn add qilish
-// let elbtnnum = document.querySelectorAll(".pizza__btn")
-// for (let h = 0; h < elbtnnum.length; h++) {
-//   elbtnnum[h].addEventListener("click", () =>{
-//     elbtnnum[h].innerHTML = "salomlar"
-//   })
+let elbtnnum = document.querySelectorAll(".pizza__btn")
+for (let h = 0; h < elbtnnum.length; h++) {
+  elbtnnum[h].addEventListener("click",addItem )
+}
+
+// function salom () {
+//   alert("helloooooo")
 // }
 
 
-// elbtnnum.innerHTML = "lll"
-// console.log(elbtnnum);
-// elbtnnum.addEventListener("click", () =>{
-//   elbtnnum.innerHTML = "salomlar"
-// })
 
-
-// let elirbtn  = document.querySelector("#birbtn")
-// elirbtn.addEventListener("click", () =>{
-
-// })
-
+// onclick='addItem(${array[i].id} )'
 
 
 let newPizzasArr = [];
 function addItem(id) {
   for (let i = 0; i < array.length; i++) {
-    if (id == array[i].id) {
+    // if (id == array[i].id) {
       newPizzasArr.push(array[i]);
-    }
+      // break
+    // }
   }
 
 
@@ -100,9 +94,9 @@ function addItem(id) {
                 -
               </button>
               <div class="btn-groiup">
-              <button id="btnnum" class="btn-num" id="btnnum">0</button>
-              <button id="btnmax" class="btn-max">+</button>
-              <button id="btnmin" class="btn-min">-</button>
+              <button class="btn-num" id="btnnum">0</button>
+              <button class="btn-max">+</button>
+              <button class="btn-min">-</button>
             </div>
             </div>
     `;
@@ -117,26 +111,95 @@ function addItem(id) {
       // BU YERDAN BTN GA  + - QILIB KETAYAPMIZ
       
       let elbtnnum = document.querySelector("#btnnum")
-      let btnmax = document.querySelector("#btnmax")
-      let btnmin = document.querySelector("#btnmin")
       // console.log(elbtnnum);
-      btnmax.addEventListener("click",() =>{
-        summari+=1
-        elbtnnum.innerHTML = summari
-      })
-      btnmin.addEventListener("click",() =>{
-        summari-=1
-        elbtnnum.innerHTML = summari
-      })
-      
-      summari++
+      summari ++
       elbtnnum.innerHTML = summari
+
     }
 
     // break qoysa bir marta ishladi
     // break
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// elbtnnum.innerHTML = "lll"
+// console.log(elbtnnum);
+// elbtnnum.addEventListener("click", () =>{
+//   elbtnnum.innerHTML = "salomlar"
+// })
+
+
+// let elirbtn  = document.querySelector("#birbtn")
+// elirbtn.addEventListener("click", () =>{
+
+// })
+
+
+
+// let newPizzasArr = [];
+// function addItem(id) {
+  // for (let i = 0; i < array.length; i++) {
+  //   if (id == array[i].id) {
+  //     newPizzasArr.push(array[i]);
+  //   }
+  // }
+
+
+  // for (let i = 0; i < newPizzasArr.length; i++) {
+  //   if (i == newPizzasArr.length - 1) {
+  //     let li = document.createElement("li");
+  //     li.className = "menu__item pizza cart__item";
+  //     li.innerHTML = `
+  //     <img class="pizza__img" src=${newPizzasArr[i].img} alt="pizza" />
+  //           <div class="pizza__name">
+  //             <p class="pizza__p">${newPizzasArr[i].name}</p>
+  //             <span class="pizza__price">$${newPizzasArr[i].price}</span>
+  //             <button class="pizza__btn remove"  onclick='removeItem(${i})'>
+  //               -
+  //             </button>
+  //             <div class="btn-groiup">
+  //             <button class="btn-num" id="btnnum">0</button>
+  //             <button class="btn-max">+</button>
+  //             <button class="btn-min">-</button>
+  //           </div>
+  //           </div>
+  //   `;
+
+  //     totalPrice += newPizzasArr[i].price;
+  //     elSubTotal.textContent = totalPrice.toFixed(2);
+  //     eltax.textContent = ((totalPrice.toFixed(2) * 10) / 100).toFixed(2)
+  //     eltotal.textContent =(eval(elSubTotal.textContent) + eval(eltax.textContent)).toFixed(2)
+  //     cartList.appendChild(li);
+  //     li.classList.add("animat")
+
+  //     // BU YERDAN BTN GA  + - QILIB KETAYAPMIZ
+      
+  //     let elbtnnum = document.querySelector("#btnnum")
+  //     // console.log(elbtnnum);
+  //     summari ++
+  //     elbtnnum.innerHTML = summari
+
+  //   }
+
+  //   // break qoysa bir marta ishladi
+  //   // break
+  // }
+// }
 
 function removeItem(index) {
   let newArrRemove = [];
@@ -218,7 +281,6 @@ function removeItem(index) {
   //           for (let s = 0; s < elclearr.length; s++) {
   //             elbtnnum[s].innerHTML = "okki"
   //           }
-
 
 
 
